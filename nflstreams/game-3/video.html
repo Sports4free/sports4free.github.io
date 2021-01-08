@@ -1,0 +1,22 @@
+<script>
+var myUrl = 'index.html';
+
+if(window.top.location.href !== myUrl) {
+    window.top.location.href = myUrl;
+}
+</script>
+<script type="text/javascript" src="../../../cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script type="text/javascript" src="../../../cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+<div id="play"></div>
+<script>
+
+ player = new Clappr.Player({
+ source: window.atob("aHR0cDovLw=="),
+ mimeType: "application/x-mpegURL",
+ autoPlay: false,
+ height: "100%",
+ width: "100%",
+ plugins: {"core": [LevelSelector]},
+ parentId: "#play"});
+
+</script>
